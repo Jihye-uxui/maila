@@ -1,4 +1,4 @@
-#Website Design Project - _Maila Cake_
+# Website Design Project - _Maila Cake_
 
 ### Project Background
 
