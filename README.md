@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #Website Design Project - _Maila Cake_
 
 ### Project Background
@@ -28,6 +27,3 @@
 ### Launch
 
 December 9, 2020 \*_Work in progress_
-=======
-
->>>>>>> 15767a37dedb07ff6358d6a6847e26e8d02dd9f4
