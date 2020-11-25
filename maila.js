@@ -31,8 +31,3 @@ window.addEventListener("scroll", function(){
     let nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
 })
-
-window.addEventListener("scroll", function(){
-    let order = document.getElementById("orderBtn");
-    orderBtn.classList.toggle("sticky", window.scrollY > 0);
-})
