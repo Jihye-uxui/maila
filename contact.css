@@ -192,16 +192,17 @@ header {
 .btn-special {
   background-color: var(--background-color);
   color: var(--accent-color);
-  padding: 10px;
+  padding: 8px;
   border: 1px solid var(--secondary-font-bright);
 }
 
 .btn-special:hover {
   background-color: transparent;
   color: var(--secondary-font-bright);
-  padding: 10px;
+  padding: 8px;
   border: 1px solid var(--secondary-font-bright);
 }
+
 
 /* Navigation Ends */
 
