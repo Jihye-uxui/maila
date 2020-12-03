@@ -76,39 +76,126 @@
   <!-- Hero Image Ends -->
   <section id="overlay">
     <form action="#" method="POST">
-      <h1>Custom Vagan Cake Order</h1>
-      <section class="name">
-        <label for="first-name">First Name *</label>
-        <input type="text" name="first-name" id="first-name" placeholder=" first name">
-        <br><label for="last-name">Last Name *</label>
-        <input type="text" name="last-name" id="last-name" placeholder=" last name">
-      </section>
-      <section class="phone">
-        <label for="phone">Phone Number *</label>
-        <input type="text" name="phone-number" id="phone" placeholder=" (123) 456 789">
-      </section>
-      <section class="email">
-        <label for="email">Email Address *</label>
-        <input type="text" name="Email-address" id="email" placeholder=" maila@example.com">
-      </section>
-      <section class="pickup">
-        <label for="pickup">Pickup Date <em>We require a minimum 5 days notice</em></label>
-        <input type="date" id="pickup" name="pickup-date" value="2020-12-01" min="2020-12-01" max="2021-12-31">
-      </section>
-      <section class="signature-selection">
-        <label for="signature">What type of sauce would you like?</label>
-        <input list="signature" id="signature" name="signature-selection">
-        <datalist id="signature-cakes">
-          <option value="Dreaming In Chocolate"></option>
-          <option value="Get Cherried Away"></option>
-          <option value="Grandma's Garden"></option>
-          <option value="Serving Up Sprinkles"></option>
-          <option value="Floral Wreath"></option>
-          <option value="Girls Love Pearls"></option>
-          <option value="Breakfast at Tiffany's"></option>
-          <option value="Party Time"></option>
-        </datalist>
-      </section>
+      <h1>Custom Cake Order</h1>
+      <div class="order-container">
+        <div class="order-notice">
+          <p>We’re so excited to hear from you! Kindly fill out our online form, and we’ll get back to you as soon as possible. 
+            <br><br>Please note we require <strong>minimum 7 days</strong> notice for custom cakes, and even then it is not a guarantee! We do tend to book up fast, especially in peak season. Save yourself the stress and book early!
+            <br><br>
+            Orders are not confirmed until a deposit is paid.</p>
+        </div>
+
+        <!-- Name input -->
+        <div class="order-container">
+          <fieldset class="two-input name">
+            <legend class="title">Name *</legend>
+            <div class="first">
+              <!-- <label for="first-name"> -->
+                <input type="text" name="first-name" id="first-name" placeholder=" Jane">
+              <span class="caption-text">First Name *</span>
+            </div>
+            <div class="second">
+              <!-- <label for="last-name"></label> -->
+              <input type="text" name="last-name" id="last-name" placeholder=" Doe">
+              <span class="caption-text">Last Name *</span>
+            </div>
+          </fieldset>
+
+          <section class="phone">
+            <label for="phone">Phone Number *</label>
+            <input type="text" name="phone-number" id="phone" placeholder=" (123) 456 789">
+          </section>
+          <section class="email">
+            <label for="email">Email Address *</label>
+            <input type="text" name="Email-address" id="email" placeholder=" maila@example.com">
+          </section>
+
+
+          <fieldset class="two-input pickup">
+            <legend for="pickup">Pickup Date & Time*</legend>
+            <div class="first">
+              <input type="date" id="pickup" name="pickup-date" value="2020-12-01" min="2020-12-01" max="2021-12-31">
+
+            </div>
+            <div class="second">
+              <input type="time" name="pickup-time" id="pickup-time" min="9:00" max="18:00" required>
+            </div>
+            <span class="caption-text">We require a minimum 7 days notice for custom cakes</span>
+          </fieldset>
+
+
+          <section>
+            <label for="cake-size">How many servings are you needing?</label>
+            <select class="cake-size" name="cake-size" id="cake-size">
+              <option value="6 in"> 6" - Approx 6 to 10 servings,  $40</option>
+              <option value="8 in"> 8" - Approx 8 to 16 servings,  $60</option>
+              <option value="10 in"> 10" - Approx 14 to 28 servings,  $90</option>
+              <option value="12 in"> 12" - Approx 30 to 40 servings,  $130</option>
+              <option value="14 in"> 14" - Approx 45 to 56 servings,  $170</option>
+            </select>
+          </section>
+
+          
+          <fieldset>
+            <legend for="cake-options">Choose Cake Flavour & Filling</legend>
+            <span class="caption-text caption-cake">Cake Options</span>
+            <div class="cake-design">
+              <label for="chocolate" class="radio-inline">Triple Chocolate
+                <input type="radio" name="cake-options" id="chocolate" value="chocolate">
+              </label>
+              <label for="french-vanila" class="radio-inline">French Vanila
+                <input type="radio" name="cake-options" id="french-vanila" value="vanila">
+              </label>
+              <label for="eggless-vanila" class="radio-inline">Eggless Vanila
+                <input type="radio" name="cake-options" id="eggless-vanila" value="lemon">
+              </label>
+              <label for="red-velvet" class="radio-inline">Red Velvet
+                <input type="radio" name="cake-options" id="red-velvet" value="butter">
+              </label>
+              <label for="mocha-marble" class="radio-inline">Mocha Marble
+                <input type="radio" name="cake-options" id="mocha-marble" value="mocha">
+              </label>
+              <label for="carrot" class="radio-inline">Organic Carrot
+                <input type="radio" name="cake-options" id="carrot" value="strawberry">
+              </label>
+            </div>
+            <span class="caption-text caption-cake">Filling Options</span>
+            <div class="cake-design">
+              <label for="chocolate" class="radio-inline">Chocolate
+                <input type="radio" name="cream-options" id="chocolate" value="chocolate">
+              </label>
+              <label for="vanila" class="radio-inline">Vanila
+                <input type="radio" name="cream-options" id="vanila" value="vanila">
+              </label>
+              <label for="butter" class="radio-inline">Cheese
+                <input type="radio" name="cream-options" id="butter" value="butter">
+              </label>
+              <label for="mocha" class="radio-inline">Mocha
+                <input type="radio" name="cream-options" id="mocha" value="mocha">
+              </label>
+              <label for="strawberry" class="radio-inline">Strawberry
+                <input type="radio" name="cream-options" id="strawberry" value="strawberry">
+              </label>
+              <label for="lemon" class="radio-inline">Lemon
+                <input type="radio" name="cream-options" id="lemon" value="lemon">
+              </label>
+            </div>
+          </fieldset>
+
+          <section>
+            <label for="special-request">Special Request</label>
+            <div class="request">
+              <textarea name="special-request" id="special-request" placeholder="Inform us any food allergies or sensitivities" cols="20">
+              </textarea>
+            </div>
+          </section>
+
+          <section>
+            <a href="#" class="submit-btn"><input type="submit" value="Submit Order"></a>
+          </section>
+          
+        </div>
+      </div>
     </form>
   </section>
       
@@ -129,7 +216,7 @@
       </ul>
     </nav>
     <p class="made-by">
-      Powered by Jihye & Mai, 2020
+      Powered by Jihye 2020
     </p>
   </footer>
 

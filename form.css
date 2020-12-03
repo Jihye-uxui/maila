@@ -178,13 +178,13 @@ header {
   margin: 0;
 }
 
-.hero-img {
+/* .hero-img {
   background-image: url("https://images.unsplash.com/photo-1571876690337-97159dafc632?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80");
   object-fit: cover;
   background-repeat: no-repeat;
   height: 200px;
   padding-top: 0;
-}
+} */
 
 .hero-img img {
   object-fit: cover;
@@ -338,46 +338,60 @@ footer p {
 
 /* Contact Page Ends*/
 
-/* Mobile Screen */
-@media screen and (max-width: 770px) {
-  /* footer {
-    display: none;
-  }
-  #orderBtn.sticky {
-    position: absolute;
-    bottom: 0px;
-    background-color: red;
-    width: 100%;
-  } */
+/* --- Cake Order Form Start ---*/
+
+.order-container {
+  padding: 15px;
 }
 
-/* Contact Page Ends*/
-
-/* Form */
+.order-notice {
+  display: flex;
+  padding: 20px 0 20px 10px;
+  text-align: start;
+  line-height: 2.5rem;
+}
 
 form {
-  text-align: center;
-  /* line-height: px; */
   height: 80%;
   overflow: auto;
   z-index: 99999;
 }
 
+.caption-text {
+  display: block;
+  text-align: start;
+  padding: 5px 0 0 5px;
+  font-size: 1.3rem;
+}
+
+input {
+  height: 40px;
+  width: 100%;
+  border: 1.5px solid var(--third-font-color);
+}
+
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   text-align: center;
   font-family: var(--body-font);
   /* padding-top: 100px; */
 }
 
-#burger {
-  max-height: 30%;
+legend,
+label {
+  float: left;
+  white-space: normal;
+  padding: 5px 0px;
+  font-size: 1.7rem;
+  display: block;
+  width: 100%;
+  font-weight: 400;
 }
 
 #overlay {
-  width: 80%;
+  width: 90%;
   margin: 3% auto;
-  height: 800px;
+  height: 80%;
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 40px;
 }
@@ -389,10 +403,103 @@ h1 {
   padding-bottom: 5%;
 }
 
-.toppings label,
-.cheesy label {
-  margin-right: 25px;
+/* name */
+.two-input {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: space-between;
 }
+
+.first {
+  padding-right: 5px;
+}
+
+.second {
+  padding-left: 5px;
+}
+
+.first,
+.second {
+  width: 50%;
+}
+
+fieldset {
+  border: none;
+  padding-bottom: 3rem;
+  overflow: hidden;
+}
+
+/* email */
+.order-container section {
+  padding-top: 0;
+}
+
+/* cake size */
+.cake-size {
+  height: 40px;
+  width: 100%;
+  border: 1.5px solid var(--third-font-color);
+}
+
+.submit-btn {
+  height: 40px;
+  width: 200px;
+  background-color: var(--third-font-color);
+}
+
+/* Cake Flavors */
+.cake-design {
+  display: flex;
+  width: 100%;
+}
+.cake-design .radio-inline {
+  display: inline-block;
+}
+
+.cake-design input[type="radio"] {
+  width: 2rem;
+  flex: 1 0 auto;
+  float: left;
+  position: relative;
+}
+
+label.radio-inline {
+  font-size: 1.5rem;
+  float: left;
+  clear: none;
+  display: block;
+  padding: 1rem 1rem 1rem 0;
+}
+
+span.caption-cake {
+  font-size: 1.8rem;
+  margin-left: -5px;
+  color: var(--main-font-dark);
+  font-weight: bolder;
+  font-family: var(--body-font);
+  display: block;
+}
+
+/* Speical Request - Textarea */
+
+.request {
+  display: flex;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+  border: 1.5px solid var(--third-font-color);
+  font-family: var(--secondary-font);
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+/* Form Submit button */
+
+/* --- Cake Order Form Ends ---*/
 
 /* Tablet Screen */
 @media screen and (min-width: 770px) {
@@ -407,8 +514,22 @@ h1 {
     height: 150px;
   }
 
-  .hero-img img {
-    height: 60rem;
+  .hero-img {
+    background-image: url("https://images.unsplash.com/photo-1571876690337-97159dafc632?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80");
+    /* background-image: url("https://images.unsplash.com/photo-1486427944299-d1955d23e34d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80"); */
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    padding-top: 0;
+  }
+
+  #overlay {
+    width: 90%;
+    margin: 3% auto;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 40px;
   }
 
   .menu-toggle {
@@ -455,6 +576,20 @@ h1 {
 
   .logo-container {
     height: 0;
+  }
+
+  .cake-design input[type="radio"] {
+    width: 2rem;
+    display: inline-block;
+    margin-right: 0.6rem;
+    position: relative;
+    margin-top: -1.1rem;
+  }
+
+  .radio-inline {
+    font-size: 1.5rem;
+    position: relative;
+    float: left;
   }
 }
 
@@ -517,5 +652,25 @@ h1 {
   .nav-list {
     height: 10%;
     visibility: visible;
+  }
+
+  #overlay {
+    width: 70%;
+  }
+  /* Form */
+
+  .cake-design input[type="radio"] {
+    width: 2rem;
+    margin-top: -10px;
+    margin-right: 10px;
+    float: left;
+  }
+
+  .radio-inline {
+    font-size: 1.5rem;
+    float: left;
+    clear: none;
+    display: block;
+    padding-left: 5px;
   }
 }
