@@ -91,30 +91,30 @@
             <legend class="title">Name *</legend>
             <div class="first">
               <!-- <label for="first-name"> -->
-                <input type="text" name="first-name" id="first-name" placeholder=" Jane">
+                <input type="text" name="first-name" id="first-name" placeholder=" Jane" required>
               <span class="caption-text">First Name *</span>
             </div>
             <div class="second">
               <!-- <label for="last-name"></label> -->
-              <input type="text" name="last-name" id="last-name" placeholder=" Doe">
+              <input type="text" name="last-name" id="last-name" placeholder=" Doe" required>
               <span class="caption-text">Last Name *</span>
             </div>
           </fieldset>
 
           <section class="phone">
             <label for="phone">Phone Number *</label>
-            <input type="text" name="phone-number" id="phone" placeholder=" (123) 456 789">
+            <input type="text" name="phone-number" id="phone" placeholder=" (123) 456 789" required>
           </section>
           <section class="email">
             <label for="email">Email Address *</label>
-            <input type="text" name="Email-address" id="email" placeholder=" maila@example.com">
+            <input type="text" name="Email-address" id="email" placeholder=" maila@example.com" required>
           </section>
 
 
           <fieldset class="two-input pickup">
             <legend for="pickup">Pickup Date & Time*</legend>
             <div class="first">
-              <input type="date" id="pickup" name="pickup-date" value="2020-12-01" min="2020-12-01" max="2021-12-31">
+              <input type="date" id="pickup" name="pickup-date" value="2020-12-01" min="2020-12-01" max="2021-12-31" required>
 
             </div>
             <div class="second">
@@ -140,8 +140,8 @@
             <legend for="cake-options">Choose Cake Flavour & Filling</legend>
             <span class="caption-text caption-cake">Cake Options</span>
             <div class="cake-design">
-              <label for="chocolate" class="radio-inline">Triple Chocolate
-                <input type="radio" name="cake-options" id="chocolate" value="chocolate">
+              <label for="triple-chocolate" class="radio-inline">Triple Chocolate
+                <input type="radio" name="cake-options" id="triple-chocolate" value="chocolate">
               </label>
               <label for="french-vanila" class="radio-inline">French Vanila
                 <input type="radio" name="cake-options" id="french-vanila" value="vanila">
@@ -185,7 +185,7 @@
           <section>
             <label for="special-request">Special Request</label>
             <div class="request">
-              <textarea name="special-request" id="special-request" placeholder="Inform us any food allergies or sensitivities" cols="20">
+              <textarea name="special-request" id="special-request" placeholder="Inform us any food allergies or sensitivities" cols="20" maxlength="1000">
               </textarea>
             </div>
           </section>
