@@ -26,4 +26,4 @@
 
 ### Launch
 
-December 9, 2020 \*_Work in progress_
+December 14, 2020
