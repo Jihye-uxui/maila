@@ -3,7 +3,7 @@
 ### Project Background
 
 - This project is a part of group assignment of ISSofBC - TechWomen Program.
-- Team of [Jihye Choe](https://github.com/Jihye-uxui) and Mai Elshabrakhity fully dedicated to this project
+- Team of [Jihye Choe](https://github.com/Jihye-uxui) and [Mai Elshabrakhity](https://github.com/mai-33) fully dedicated to this project
 
 ---
 
