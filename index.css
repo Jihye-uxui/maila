@@ -31,6 +31,15 @@ body {
   font-family: var(--main-font);
   margin: 0;
   font-weight: 300;
+  background-color: var(--secondary-font);
+}
+
+.button {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  color: #000000;
+  height: 3rem;
 }
 
 section {
@@ -108,6 +117,8 @@ header {
   width: 100%;
   height: 100vh;
   background-color: black;
+  font-size: 14px;
+  letter-spacing: 0.5px;
   font-family: (--secondary-font);
   padding: 4.4rem;
   display: flex;
@@ -188,13 +199,11 @@ header {
 }
 
 .hero-img {
-  height: 200px;
-  background-color: var(--accent-color);
+  padding-top: 0;
 }
 
 .hero-img img {
   object-fit: cover;
-  height: 200px;
 }
 
 /* Special button on Navbars */
@@ -210,21 +219,10 @@ header {
   color: var(--secondary-font-bright);
   padding: 8px;
   border: 1px solid var(--secondary-font-bright);
+  transition: all 0.4s ease-out;
 }
 
 /* Navigation Ends */
-
-body {
-  background-color: var(--background-color);
-}
-
-.button {
-  padding-top: 5rem;
-  display: flex;
-  justify-content: center;
-  color: #000000;
-  height: 3rem;
-}
 
 h2,
 h3 {
@@ -232,9 +230,171 @@ h3 {
   padding-bottom: 1.3rem;
 }
 
-.hours-location h2 {
-  padding-bottom: 3rem;
+/* ----- Main page start --- */
+/* Hero Image */
+
+.main-logo img {
+  width: 45%;
+  margin-top: 12%;
 }
+
+.hero {
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(img/hero-3.jpg);
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.hero span {
+  color: var(--secondary-font-bright);
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px var(--main-font-dark);
+  text-transform: uppercase;
+}
+
+/* ABOUT */
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: var(--body-font);
+  padding-bottom: 2rem;
+  font-size: 4rem;
+  padding: 0 auto;
+}
+
+.about {
+  padding: 100px 10px 30px 10px;
+}
+
+.about-us {
+  display: flex;
+  justify-content: center;
+  line-height: 2.5rem;
+}
+
+.about-us-strong {
+  font-weight: bold;
+}
+
+.our-promise {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.our-promise img {
+  width: 100px;
+}
+
+/* Scrolled-background */
+
+.parallax-1 {
+  background-image: url("img/cupcake-banner.png");
+
+  /* The image used */
+  /* Set a specific height */
+  min-height: 400px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Gallery Cards */
+
+.container.new-bakes {
+  padding-bottom: 150px;
+}
+
+.card-container img {
+  border-radius: 50%;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 300px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.card-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  box-sizing: border-box;
+  justify-self: center;
+}
+
+.card-container .card-box .imgBox {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-container .card-box .imgBox img {
+  max-width: 110%;
+  transition: transform 2s;
+}
+
+.card-container .card-box:hover .imgBox img {
+  transform: scale(1.2);
+}
+
+.card-container .card-box .details {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  background: rgba(0, 0, 0, 0.8);
+  transform: scaleY(0);
+  transition: transform 0.5s;
+  border: 20px solid var(--third-font-color);
+}
+
+.card-container .card-box:hover .details {
+  transform: scaleY(1);
+}
+
+.card-container .card-box .details .content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 15px;
+  color: var(--secondary-font-bright);
+}
+
+.card-container .card-box .details .content h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 3rem;
+  color: var(--background-color);
+}
+
+.card-container .card-box .details .content p {
+  margin: 10px 0 0;
+  padding: 0;
+}
+
+/* Promotion */
+.promotion {
+  padding-bottom: 100px;
+}
+
+/* ----Main page ends */
 
 /* footer */
 .footer-container {
@@ -300,25 +460,12 @@ h3 {
 
 #footer-email::placeholder {
   color: #b1b1b1;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-family: var(--main-font);
   letter-spacing: 0.1rem;
   padding-left: 5px;
 }
 
-.submit-btn {
-  background-color: var(--background-color);
-  width: 100px;
-  height: 40px;
-  border-radius: 4px;
-  background-color: var(--third-font-color);
-  outline: none;
-  border: none;
-  color: var(--main-font-dark);
-  letter-spacing: 0.2rem;
-}
-
-.submit-btn,
 #footer-email-btn {
   width: 100px;
   height: 40px;
@@ -330,7 +477,6 @@ h3 {
   letter-spacing: 0.2rem;
 }
 
-.submit-btn:hover,
 #footer-email-btn:hover {
   cursor: pointer;
   background-color: var(--background-color);
@@ -367,193 +513,8 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
-/* Contact Page Ends*/
-
-/* --- Cake Order Form Start ---*/
-
-.order-container {
-  padding: 15px;
-}
-
-.order-notice {
-  display: flex;
-  padding: 20px 0 20px 10px;
-  text-align: center;
-  line-height: 2.5rem;
-}
-
-.order-notice p {
-  width: 85%;
-  margin: 0 auto;
-}
-.order-container {
-  margin: 0 auto;
-  width: 100%;
-}
-
-form {
-  height: 80%;
-  overflow: auto;
-  z-index: 99999;
-}
-
-.caption-text {
-  display: block;
-  text-align: start;
-  padding: 5px 0 0 3px;
-  font-size: 1.3rem;
-}
-
-input {
-  height: 40px;
-  width: 100%;
-  border: 1.5px solid var(--third-font-color);
-}
-
-h1 {
-  font-size: 3.5rem;
-  text-align: center;
-  font-family: var(--body-font);
-  padding: 15px 0;
-}
-
-legend,
-label {
-  float: left;
-  white-space: normal;
-  padding: 5px 0px;
-  font-size: 1.7rem;
-  display: block;
-  width: 100%;
-  font-weight: 400;
-}
-
-#overlay {
-  width: 90%;
-  margin: 3% auto;
-  height: 65%;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 40px;
-}
-
-#logo {
-  width: 300px;
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 5%;
-}
-
-/* name */
-.two-input {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: space-between;
-}
-
-.first {
-  padding-right: 5px;
-}
-
-.second {
-  padding-left: 5px;
-}
-
-.first,
-.second {
-  width: 50%;
-}
-
-fieldset {
-  border: none;
-  padding-bottom: 3rem;
-  overflow: hidden;
-}
-
-/* email */
-.order-container section {
-  padding-top: 0;
-}
-
-/* cake size */
-.cake-size {
-  height: 40px;
-  width: 100%;
-  border: 1.5px solid var(--third-font-color);
-}
-
-/* Cake Flavors */
-.cake-design {
-  display: flex;
-  width: 100%;
-}
-.cake-design .radio-inline {
-  display: inline-block;
-}
-
-.cake-design input[type="radio"] {
-  width: 2rem;
-  flex: 1 0 auto;
-  float: left;
-  position: relative;
-}
-
-label.radio-inline {
-  font-size: 1.5rem;
-  float: left;
-  clear: none;
-  display: block;
-  padding: 1rem 1rem 1rem 0;
-}
-
-span.caption-cake {
-  font-size: 1.8rem;
-  margin-left: 0px;
-  color: var(--main-font-dark);
-  font-weight: bolder;
-  display: block;
-  font-style: italic;
-}
-
-/* Speical Request - Textarea */
-
-.request {
-  display: flex;
-  width: 100%;
-}
-
-textarea {
-  resize: none;
-  border: 1.5px solid var(--third-font-color);
-  font-family: var(--secondary-font);
-  width: 100%;
-  height: 100px;
-  padding: 5px;
-  margin-top: 10px;
-  font-size: 15px;
-}
-
-/* Form Submit button */
-.submit-btn {
-  height: 40px;
-  width: 380px;
-  margin: 0 auto;
-}
-
-.submit-order {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-input[type="submit"] {
-  justify-content: center;
-  position: relative;
-}
-
-/* --- Cake Order Form Ends ---*/
 
 /* Mobile Screen */
-
 @media screen and (max-width: 770px) {
   .footer-box.col1 {
     grid-row: 1 / span 1;
@@ -583,12 +544,7 @@ input[type="submit"] {
   #footer-email {
     width: 250px;
   }
-  .hero-img {
-    height: 100px;
-  }
 }
-
-/* header background break point.. */
 
 /* Tablet Screen */
 @media screen and (min-width: 770px) {
@@ -599,8 +555,10 @@ input[type="submit"] {
   header.sticky {
     background-color: var(--accent-color);
     opacity: 0.9;
-    padding-bottom: 180px;
-    height: 150px;
+  }
+
+  .hero-img img {
+    height: 60rem;
   }
 
   .menu-toggle {
@@ -617,13 +575,12 @@ input[type="submit"] {
   }
 
   .nav-list {
-    visibility: visible;
     display: inline;
+    visibility: visible;
     /* justify-content: top; */
     background-color: transparent;
     padding: 0px;
     margin: 0px;
-    height: 10%;
     transform: initial;
     transition: initial;
   }
@@ -649,27 +606,12 @@ input[type="submit"] {
     height: 0;
   }
 
-  .order-notice p {
+  .maila-intro p {
     width: 80%;
-    margin: 0 auto;
-  }
-  .order-container {
-    margin: 0 auto;
-    width: 90%;
   }
 
-  .cake-design input[type="radio"] {
-    width: 2rem;
-    display: inline-block;
-    margin-right: 0.6rem;
-    position: relative;
-    margin-top: -1.1rem;
-  }
-
-  .radio-inline {
-    font-size: 3.5rem;
-    position: relative;
-    float: left;
+  .about-us p {
+    width: 55%;
   }
 
   /* footer */
@@ -694,12 +636,18 @@ input[type="submit"] {
   .footer-box.col4 h2 {
     padding-top: 30px;
   }
+
+  /* Our Promise */
+  .our-promise {
+    width: 50%;
+    padding: 0 auto;
+  }
 }
 
 /* PC Screen */
 @media screen and (min-width: 990px) {
   header.sticky {
-    background-color: ver(--accent-color);
+    background-color: var(--accent-color);
     opacity: 0.9;
     height: 120px;
     padding: 5px 100px;
@@ -756,40 +704,34 @@ input[type="submit"] {
     height: 10%;
     visibility: visible;
   }
+  /* About  */
 
-  #overlay {
-    width: 65%;
-  }
-  /* Form */
-
-  .cake-design input[type="radio"] {
-    width: 2rem;
-    margin-top: -10px;
-    margin-right: 10px;
-    float: left;
+  .maila-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .order-notice p {
-    width: 60%;
-    margin: 0 auto;
+  .maila-intro p {
+    width: 85%;
+    padding-top: 0;
   }
-  .order-container {
-    margin: 0 auto;
+
+  .maila h1 {
+    padding-bottom: 50px;
+  }
+
+  .maila-pic img {
     width: 90%;
   }
 
-  .radio-inline {
-    font-size: 1.5rem;
-    float: left;
-    clear: none;
-    display: block;
-    padding-left: 5px;
+  .card-box.col1 {
+    grid-column: 1 / span 1;
   }
-
-  .input[type="radio"] {
-    margin-top: -1px;
-    vertical-align: middle;
-    height: 100%;
+  .card-box.col2 {
+    grid-column: 2 / span 1;
+  }
+  .card-box.col3 {
+    grid-column: 3 / span 1;
   }
 
   /* footer */

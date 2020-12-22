@@ -34,31 +34,28 @@
           <div class="nav-list">
             <ul>
               <li class="nav-item">
-                <a href="#" class="nav-link">Contact</a>
+                <a href="index.html" class="nav-link">Home</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Menus</a>
+                <a href="menu.html" class="nav-link">Menu</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">About</a>
+                <a href="about.html" class="nav-link">About</a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">Gallery</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link btn-special" id="orderBtn">Order Online</a>
+                <a href="form.html" class="nav-link btn-special" id="orderBtn">Order Online</a>
               </li>
             </ul>
             <!-- SNS icons -->
             <ul class="nav-icons">
               <li class="nav-sns">
-                <a href="#" class="nav-link"><i class="fab fa-facebook-square"></i></a>
+                <a href="#" class="nav-link icons"><i class="fab fa-facebook-square"></i></a>
               </li>
               <li class="nav-sns">
-                <a href="#" class="nav-link"><i class="fab fa-instagram-square"></i></a>
+                <a href="#" class="nav-link icons"><i class="fab fa-instagram-square"></i></a>
               </li>
               <li class="nav-sns">
-                <a href="#" class="nav-link"><i class="fas fa-envelope-square"></i></a>
+                <a href="#" class="nav-link icons"><i class="fas fa-envelope-square"></i></a>
               </li>
             </ul>
           </div>
@@ -68,19 +65,18 @@
   </header>
   <!-- Header Ends -->
   <section class="hero-img">
-    <!-- <img src="https://images.unsplash.com/photo-1571876690337-97159dafc632?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1650&q=80"
-      alt="" /> -->
 
   </section>
 
   <!-- Hero Image Ends -->
   <section id="overlay">
-    <form action="#" method="POST">
+    <div class="form-container">
+    <form action="contact.php" method="POST" target="iframe_mail">
       <h1>Custom Cake Order</h1>
       <div class="order-container">
         <div class="order-notice">
           <p>We’re so excited to hear from you! Kindly fill out our online form, and we’ll get back to you as soon as possible. 
-            <br><br>Please note we require <strong>minimum 7 days</strong> notice for custom cakes, and even then it is not a guarantee! We do tend to book up fast, especially in peak season. Save yourself the stress and book early!
+            <br><br>Please note we require <strong>minimum 7 days</strong> notice for custom cakes. We do tend to book up fast, especially in peak season. Save yourself the stress and book early!
             <br><br>
             Orders are not confirmed until a deposit is paid.</p>
         </div>
@@ -107,14 +103,14 @@
           </section>
           <section class="email">
             <label for="email">Email Address *</label>
-            <input type="text" name="Email-address" id="email" placeholder=" maila@example.com" required>
+            <input type="text" name="email-address" id="email" placeholder=" maila@example.com" required>
           </section>
 
 
           <fieldset class="two-input pickup">
-            <legend for="pickup">Pickup Date & Time*</legend>
+            <legend for="pickup">Pick-up / Delivery Date & Time*</legend>
             <div class="first">
-              <input type="date" id="pickup" name="pickup-date" value="2020-12-01" min="2020-12-01" max="2021-12-31" required>
+              <input type="date" id="pickup" name="pickup-date" value="2020-12-14" min="2020-12-01" max="2021-12-31" required>
 
             </div>
             <div class="second">
@@ -129,7 +125,7 @@
             <select class="cake-size" name="cake-size" id="cake-size">
               <option value="6 in"> 6" - Approx 6 to 10 servings,  $40</option>
               <option value="8 in"> 8" - Approx 8 to 16 servings,  $60</option>
-              <option value="10 in"> 10" - Approx 14 to 28 servings,  $90</option>
+              <option value="10 in"> 10" - Approx 14 to 25 servings,  $90</option>
               <option value="12 in"> 12" - Approx 30 to 40 servings,  $130</option>
               <option value="14 in"> 14" - Approx 45 to 56 servings,  $170</option>
             </select>
@@ -138,28 +134,28 @@
           
           <fieldset>
             <legend for="cake-options">Choose Cake Flavour & Filling</legend>
-            <span class="caption-text caption-cake">Cake Options</span>
+            <label class="caption-text caption-cake">1. Cake Options</label>
             <div class="cake-design">
-              <label for="triple-chocolate" class="radio-inline">Triple Chocolate
+              <label for="chocolate" class="radio-inline">Chocolate
                 <input type="radio" name="cake-options" id="triple-chocolate" value="chocolate">
               </label>
-              <label for="french-vanila" class="radio-inline">French Vanila
+              <label for="vanila" class="radio-inline">Vanila
                 <input type="radio" name="cake-options" id="french-vanila" value="vanila">
               </label>
-              <label for="eggless-vanila" class="radio-inline">Eggless Vanila
-                <input type="radio" name="cake-options" id="eggless-vanila" value="lemon">
+              <label for="mint" class="radio-inline">Mint
+                <input type="radio" name="cake-options" id="mint" value="lemon">
               </label>
               <label for="red-velvet" class="radio-inline">Red Velvet
                 <input type="radio" name="cake-options" id="red-velvet" value="butter">
               </label>
-              <label for="mocha-marble" class="radio-inline">Mocha Marble
-                <input type="radio" name="cake-options" id="mocha-marble" value="mocha">
+              <label for="mocha" class="radio-inline">Mocha
+                <input type="radio" name="cake-options" id="mocha" value="mocha">
               </label>
-              <label for="carrot" class="radio-inline">Organic Carrot
-                <input type="radio" name="cake-options" id="carrot" value="strawberry">
+              <label for="carrot" class="radio-inline">Carrot
+                <input type="radio" name="cake-options" id="carrot" value="carrot">
               </label>
             </div>
-            <span class="caption-text caption-cake">Filling Options</span>
+            <label class="caption-text caption-cake">2. Filling Options</label>
             <div class="cake-design">
               <label for="chocolate" class="radio-inline">Chocolate
                 <input type="radio" name="cream-options" id="chocolate" value="chocolate">
@@ -167,11 +163,11 @@
               <label for="vanila" class="radio-inline">Vanila
                 <input type="radio" name="cream-options" id="vanila" value="vanila">
               </label>
-              <label for="butter" class="radio-inline">Cheese
+              <label for="butter" class="radio-inline">Butter
                 <input type="radio" name="cream-options" id="butter" value="butter">
               </label>
-              <label for="mocha" class="radio-inline">Mocha
-                <input type="radio" name="cream-options" id="mocha" value="mocha">
+              <label for="caramel" class="radio-inline">Caramel
+                <input type="radio" name="cream-options" id="caramel" value="caramel">
               </label>
               <label for="strawberry" class="radio-inline">Strawberry
                 <input type="radio" name="cream-options" id="strawberry" value="strawberry">
@@ -183,42 +179,75 @@
           </fieldset>
 
           <section>
-            <label for="special-request">Special Request</label>
+            <label for="special-request">Let us know what you're looking for!</label>
+            <span class="caption-text">We will be asking you for some inspiration pictures once we get back to you. Please have them ready to go!</span>
+
             <div class="request">
               <textarea name="special-request" id="special-request" placeholder="Inform us any food allergies or sensitivities" cols="20" maxlength="1000">
               </textarea>
             </div>
           </section>
 
-          <section>
-            <a href="#" class="submit-btn"><input type="submit" value="Submit Order"></a>
+          <section class="submit-order">
+            <a href="#">
+              <input type="submit" class="submit-btn" value="Submit Order">
+            </a>
           </section>
           
         </div>
       </div>
     </form>
+  </div>
   </section>
-      
 
    <!-- Footer -->
-  <footer>
-    <nav class="footer-nav">
-      <ul class="footer-sns">
-        <li class="footer-icons"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
-        <li class="footer-icons"><a href="#"><i class="fab fa-instagram-square"></i></a></li>
-        <li class="footer-icons"><a href="#"><i class="fas fa-envelope-square"></i></a></li>
-      </ul>
-      <ul class="footer-link">
-        <li class="footer-menu"><a href="#">Press</a></li>
-        <li class="footer-menu"><a href="#">Contact</a></li>
-        <li class="footer-menu"><a href="#">Shop</a></li>
-        <li class="footer-menu"><a href="#" class="btn-special">email signup</a></li>
-      </ul>
-    </nav>
-    <p class="made-by">
-      Powered by Jihye 2020
-    </p>
+   <footer>
+    <div class="footer-container">
+      <div class="footer-box col1">
+        <h2>Quick links</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="form.html">Order Online</a></li>
+        </ul>
+      </div>
+      <div class="footer-box col2">
+        <h2>Hours</h2>
+        <ul>
+          <li>Tuesday-Saturday: 12pm-6pm</li>
+          <li>Sunday-Monday & Holidays: Closed</li>
+        </ul>
+        <br>
+        
+      </div>
+      <div class="footer-box col3">
+        <h2>Location</h2>
+        <ul>
+          <li><a href="#"> 7548 120 Street,
+            <br>Surrey BC Canada, <br>V3W 3N1</a>
+            <br>+1 (604) 503-5577</li>
+        </ul>
+      </div>
+      <div class="footer-box col4">
+        <h2>Join our Newsletter</h2>
+          <input type="email" placeholder="Enter your email address" id="footer-email">
+          <input type="button" value="Subscribe" id="footer-email-btn">
+
+        <h2>Follow @maila</h2>
+          <ul class="footer-sns">
+            <li class="footer-icons"><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+            <li class="footer-icons"><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+            <li class="footer-icons"><a href="#"><i class="fas fa-envelope-square"></i></a></li>
+          </ul>
+      </div>
+    </div>
   </footer>
+  <div class="footer-last">
+    <p class="made-by">
+      Powered by Jihye & Mai, 2020
+    </p>
+  </div>
 
 
   <script src="maila.js"></script>

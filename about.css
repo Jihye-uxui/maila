@@ -31,6 +31,15 @@ body {
   font-family: var(--main-font);
   margin: 0;
   font-weight: 300;
+  background-color: var(--secondary-font);
+}
+
+.button {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  color: #000000;
+  height: 3rem;
 }
 
 section {
@@ -108,6 +117,8 @@ header {
   width: 100%;
   height: 100vh;
   background-color: black;
+  font-size: 14px;
+  letter-spacing: 0.5px;
   font-family: (--secondary-font);
   padding: 4.4rem;
   display: flex;
@@ -188,13 +199,11 @@ header {
 }
 
 .hero-img {
-  height: 200px;
-  background-color: var(--accent-color);
+  padding-top: 0;
 }
 
 .hero-img img {
   object-fit: cover;
-  height: 200px;
 }
 
 /* Special button on Navbars */
@@ -210,21 +219,10 @@ header {
   color: var(--secondary-font-bright);
   padding: 8px;
   border: 1px solid var(--secondary-font-bright);
+  transition: all 0.4s ease-out;
 }
 
 /* Navigation Ends */
-
-body {
-  background-color: var(--background-color);
-}
-
-.button {
-  padding-top: 5rem;
-  display: flex;
-  justify-content: center;
-  color: #000000;
-  height: 3rem;
-}
 
 h2,
 h3 {
@@ -232,8 +230,91 @@ h3 {
   padding-bottom: 1.3rem;
 }
 
-.hours-location h2 {
-  padding-bottom: 3rem;
+/* ABOUT */
+/* 
+.parallax-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+    url(img/hero-2.jpg);
+  /* background-image: url(img/hero-2.jpg); */
+/* The image used */
+/* Set a specific height */
+/* min-height: 450px; */
+/* position: relative; */
+/* margin-top: -50px; */
+/* Create the parallax scrolling effect */
+/* background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+.parallax-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(00, 00, 0, 0.2)),
+    url("img/about-background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 500px;
+  margin-top: -70px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: var(--body-font);
+  padding-bottom: 1.3rem;
+  font-size: 4rem;
+  padding: 0 auto;
+}
+
+.our-promise {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 120px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.our-promise img {
+  width: 130px;
+  border-radius: 50%;
+}
+
+.about {
+  padding: 10px;
+}
+.about-us {
+  display: flex;
+  justify-content: center;
+  line-height: 2.5rem;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+.about-us p {
+  width: 80%;
+  padding-bottom: 30px;
+}
+
+.maila {
+  padding-top: 100px;
+}
+
+.maila-pic img {
+  width: 60%;
+}
+
+.maila-intro p {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  line-height: 2.5rem;
+  text-align: start;
 }
 
 /* footer */
@@ -300,25 +381,12 @@ h3 {
 
 #footer-email::placeholder {
   color: #b1b1b1;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-family: var(--main-font);
   letter-spacing: 0.1rem;
   padding-left: 5px;
 }
 
-.submit-btn {
-  background-color: var(--background-color);
-  width: 100px;
-  height: 40px;
-  border-radius: 4px;
-  background-color: var(--third-font-color);
-  outline: none;
-  border: none;
-  color: var(--main-font-dark);
-  letter-spacing: 0.2rem;
-}
-
-.submit-btn,
 #footer-email-btn {
   width: 100px;
   height: 40px;
@@ -330,7 +398,6 @@ h3 {
   letter-spacing: 0.2rem;
 }
 
-.submit-btn:hover,
 #footer-email-btn:hover {
   cursor: pointer;
   background-color: var(--background-color);
@@ -367,193 +434,8 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
-/* Contact Page Ends*/
-
-/* --- Cake Order Form Start ---*/
-
-.order-container {
-  padding: 15px;
-}
-
-.order-notice {
-  display: flex;
-  padding: 20px 0 20px 10px;
-  text-align: center;
-  line-height: 2.5rem;
-}
-
-.order-notice p {
-  width: 85%;
-  margin: 0 auto;
-}
-.order-container {
-  margin: 0 auto;
-  width: 100%;
-}
-
-form {
-  height: 80%;
-  overflow: auto;
-  z-index: 99999;
-}
-
-.caption-text {
-  display: block;
-  text-align: start;
-  padding: 5px 0 0 3px;
-  font-size: 1.3rem;
-}
-
-input {
-  height: 40px;
-  width: 100%;
-  border: 1.5px solid var(--third-font-color);
-}
-
-h1 {
-  font-size: 3.5rem;
-  text-align: center;
-  font-family: var(--body-font);
-  padding: 15px 0;
-}
-
-legend,
-label {
-  float: left;
-  white-space: normal;
-  padding: 5px 0px;
-  font-size: 1.7rem;
-  display: block;
-  width: 100%;
-  font-weight: 400;
-}
-
-#overlay {
-  width: 90%;
-  margin: 3% auto;
-  height: 65%;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 40px;
-}
-
-#logo {
-  width: 300px;
-  display: block;
-  margin: 0 auto;
-  padding-bottom: 5%;
-}
-
-/* name */
-.two-input {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: space-between;
-}
-
-.first {
-  padding-right: 5px;
-}
-
-.second {
-  padding-left: 5px;
-}
-
-.first,
-.second {
-  width: 50%;
-}
-
-fieldset {
-  border: none;
-  padding-bottom: 3rem;
-  overflow: hidden;
-}
-
-/* email */
-.order-container section {
-  padding-top: 0;
-}
-
-/* cake size */
-.cake-size {
-  height: 40px;
-  width: 100%;
-  border: 1.5px solid var(--third-font-color);
-}
-
-/* Cake Flavors */
-.cake-design {
-  display: flex;
-  width: 100%;
-}
-.cake-design .radio-inline {
-  display: inline-block;
-}
-
-.cake-design input[type="radio"] {
-  width: 2rem;
-  flex: 1 0 auto;
-  float: left;
-  position: relative;
-}
-
-label.radio-inline {
-  font-size: 1.5rem;
-  float: left;
-  clear: none;
-  display: block;
-  padding: 1rem 1rem 1rem 0;
-}
-
-span.caption-cake {
-  font-size: 1.8rem;
-  margin-left: 0px;
-  color: var(--main-font-dark);
-  font-weight: bolder;
-  display: block;
-  font-style: italic;
-}
-
-/* Speical Request - Textarea */
-
-.request {
-  display: flex;
-  width: 100%;
-}
-
-textarea {
-  resize: none;
-  border: 1.5px solid var(--third-font-color);
-  font-family: var(--secondary-font);
-  width: 100%;
-  height: 100px;
-  padding: 5px;
-  margin-top: 10px;
-  font-size: 15px;
-}
-
-/* Form Submit button */
-.submit-btn {
-  height: 40px;
-  width: 380px;
-  margin: 0 auto;
-}
-
-.submit-order {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
-input[type="submit"] {
-  justify-content: center;
-  position: relative;
-}
-
-/* --- Cake Order Form Ends ---*/
 
 /* Mobile Screen */
-
 @media screen and (max-width: 770px) {
   .footer-box.col1 {
     grid-row: 1 / span 1;
@@ -583,12 +465,7 @@ input[type="submit"] {
   #footer-email {
     width: 250px;
   }
-  .hero-img {
-    height: 100px;
-  }
 }
-
-/* header background break point.. */
 
 /* Tablet Screen */
 @media screen and (min-width: 770px) {
@@ -599,8 +476,10 @@ input[type="submit"] {
   header.sticky {
     background-color: var(--accent-color);
     opacity: 0.9;
-    padding-bottom: 180px;
-    height: 150px;
+  }
+
+  .hero-img img {
+    height: 60rem;
   }
 
   .menu-toggle {
@@ -617,13 +496,12 @@ input[type="submit"] {
   }
 
   .nav-list {
-    visibility: visible;
     display: inline;
+    visibility: visible;
     /* justify-content: top; */
     background-color: transparent;
     padding: 0px;
     margin: 0px;
-    height: 10%;
     transform: initial;
     transition: initial;
   }
@@ -649,27 +527,13 @@ input[type="submit"] {
     height: 0;
   }
 
-  .order-notice p {
+  .maila-intro p {
     width: 80%;
-    margin: 0 auto;
-  }
-  .order-container {
-    margin: 0 auto;
-    width: 90%;
   }
 
-  .cake-design input[type="radio"] {
-    width: 2rem;
-    display: inline-block;
-    margin-right: 0.6rem;
-    position: relative;
-    margin-top: -1.1rem;
-  }
-
-  .radio-inline {
-    font-size: 3.5rem;
-    position: relative;
-    float: left;
+  .about-us p {
+    width: 60%;
+    padding-bottom: 30px;
   }
 
   /* footer */
@@ -694,12 +558,21 @@ input[type="submit"] {
   .footer-box.col4 h2 {
     padding-top: 30px;
   }
+
+  /* Our Promise */
+  .our-promise {
+    width: 60%;
+    padding: 0 auto;
+  }
+  .our-promise img {
+    width: 150px;
+  }
 }
 
 /* PC Screen */
 @media screen and (min-width: 990px) {
   header.sticky {
-    background-color: ver(--accent-color);
+    background-color: var(--accent-color);
     opacity: 0.9;
     height: 120px;
     padding: 5px 100px;
@@ -756,40 +629,31 @@ input[type="submit"] {
     height: 10%;
     visibility: visible;
   }
+  /* About  */
 
-  #overlay {
-    width: 65%;
-  }
-  /* Form */
-
-  .cake-design input[type="radio"] {
-    width: 2rem;
-    margin-top: -10px;
-    margin-right: 10px;
-    float: left;
+  .our-promise img {
+    width: 180px;
   }
 
-  .order-notice p {
-    width: 60%;
-    margin: 0 auto;
+  .about-us p {
+    width: 50%;
   }
-  .order-container {
-    margin: 0 auto;
+
+  .maila-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .maila-intro p {
+    width: 85%;
+    padding-top: 0;
+  }
+
+  .maila h1 {
+    padding-bottom: 50px;
+  }
+  .maila-pic img {
     width: 90%;
-  }
-
-  .radio-inline {
-    font-size: 1.5rem;
-    float: left;
-    clear: none;
-    display: block;
-    padding-left: 5px;
-  }
-
-  .input[type="radio"] {
-    margin-top: -1px;
-    vertical-align: middle;
-    height: 100%;
   }
 
   /* footer */
