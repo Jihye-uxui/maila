@@ -1,4 +1,4 @@
-# Website Design Project - _Maila Cake_
+# Business Website - _Maila Cakes_
 
 ### Project Background
 
@@ -19,11 +19,17 @@
 - HTML 5
 - CSS 3
   - Flexbox
-  - Grid
+  - CSS Grid
+  - Animation and Transition effects
 - JavaScript ES6
+- Document Object Model
+
+- Responsive web design (PC / tablet / mobile)
+- Cutomer online ordering feature using Google Apps Script
 
 ---
 
 ### Launch
 
-December 14, 2020
+- December 14, 2020
+- Delivered an online presentation and product demo to a group of 25 people via Zoom.
